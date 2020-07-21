@@ -7,7 +7,7 @@ class Overview extends CI_Controller {
 		$this->load->model('login_model');
         //cek session dan level user
         if($this->login_model->is_role() != "user"){
-            redirect("login/");
+            redirect("logins/");
         }
 	}
 	

@@ -8,8 +8,8 @@
 	<<div class="container">
         <div class="row">
             <div class="col-12 col-md-6 text-center mt-5 mx-auto p-4">
-                <h1 class="h2">Login</h1>
-                <p class="lead">Silahkan masuk ke Panel</p>
+                <h1 class="h2">KampungJogs</h1>
+                <p class="lead">Sistem Pemasaran Kampung Wisata</p>
             </div>
         </div>
         <div class="row">

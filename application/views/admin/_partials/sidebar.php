@@ -17,6 +17,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="<?php echo site_url('admin/kampungs') ?>">Data Kampung</a>
                                     <a class="nav-link" href="<?php echo site_url('admin/users') ?>">Data Pengunjung</a>
+                                    <a class="nav-link" href="<?php echo site_url('admin/komunitass') ?>">Data Komunitas</a>
                                 </nav>
                             </div>
 							<div class="sb-sidenav-menu-heading">Logout</div>

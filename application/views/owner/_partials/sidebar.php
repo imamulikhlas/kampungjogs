@@ -17,6 +17,8 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="<?php echo site_url('owner/kampungs') ?>">Data Kampung</a>
                                     <a class="nav-link" href="<?php echo site_url('owner/kampungs/add') ?>">Tambah Kampung</a>
+                                    <a class="nav-link" href="<?php echo site_url('owner/komunitass') ?>">Data Komunitas</a>
+                                    <a class="nav-link" href="<?php echo site_url('owner/prediksi') ?>">Prediksi Harga</a>
                                 </nav>
                             </div>
 							<div class="sb-sidenav-menu-heading">Logout</div>

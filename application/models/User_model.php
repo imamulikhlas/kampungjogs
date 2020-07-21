@@ -7,7 +7,7 @@ class User_model extends CI_Model
     public $id;
     public $namadepan;
     public $namabelakang;
-	public $namakampung;
+	public $namakomunitas;
     public $harga;
     
 
@@ -22,7 +22,7 @@ class User_model extends CI_Model
             'label' => 'Namabelakang',
             'rules' => 'required'],
             
-			['field' => 'namakampung',
+			['field' => 'namakomunitas',
             'label' => 'Namakempung',
             'rules' => 'required'],
 			
@@ -48,7 +48,7 @@ class User_model extends CI_Model
         $this->id = uniqid();
         $this->namadepan = $post["namadepan"];
         $this->namabelakang = $post["namabelakang"];
-        $this->namakampung = $post["namakampung"];
+        $this->namakomunitas = $post["namakomunitas"];
 		$this->harga = $post["harga"];
         return $this->db->insert($this->_table, $this);
     }
@@ -59,7 +59,7 @@ class User_model extends CI_Model
         $this->id = $post["id"];
         $this->namadepan = $post["namadepan"];
         $this->namabelakang = $post["namabelakang"];
-        $this->namakampung = $post["namakampung"];
+        $this->namakomunitas = $post["namakomunitas"];
 		$this->harga = $post["harga"];
         return $this->db->update($this->_table, $this, array('id' => $post['id']));
     }

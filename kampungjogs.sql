@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2020 at 03:55 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.31
+-- Generation Time: Jul 21, 2020 at 08:25 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -49,6 +50,21 @@ INSERT INTO `kampung` (`ID`, `nama`, `lokasi`, `kriteria`, `deskripsi`, `gambar`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `komunitas`
+--
+
+CREATE TABLE `komunitas` (
+  `ID` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `lokasi` varchar(50) NOT NULL,
+  `kriteria` enum('persawahan','pertanian','perbatikan','penenunan','edukasi','pertanian') NOT NULL,
+  `deskripsi` text NOT NULL,
+  `gambar` varchar(50) NOT NULL DEFAULT '.jpg'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `login`
 --
 
@@ -65,9 +81,9 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `username`, `password`, `nama_user`, `role`) VALUES
-(1, 'owner', 'owner', 'Zachary Purschell', 'owner'),
-(2, 'user', 'user', 'Brayden Paxton', 'user'),
-(3, 'admin', 'admin', 'Kimberley Knox', 'admin');
+(1, 'owner', 'owner', 'Pengelola Kampung', 'owner'),
+(2, 'user', 'user', 'Pengelola Komunitas', 'user'),
+(3, 'admin', 'admin', 'Administrator', 'admin');
 
 -- --------------------------------------------------------
 
@@ -104,6 +120,12 @@ ALTER TABLE `kampung`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `komunitas`
+--
+ALTER TABLE `komunitas`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
@@ -123,6 +145,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `kampung`
 --
 ALTER TABLE `kampung`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `komunitas`
+--
+ALTER TABLE `komunitas`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 

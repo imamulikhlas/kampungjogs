@@ -46,11 +46,11 @@
 							</div>
 							
 							<div class="form-group">
-								<label for="namakampung">Nama Kampung*</label>
-								<input class="form-control <?php echo form_error('namakampung') ? 'is-invalid':'' ?>"
-								 type="text" name="namakampung" placeholder="Nama Kampung" />
+								<label for="namakomunitas">Nama komunitas*</label>
+								<input class="form-control <?php echo form_error('namakomunitas') ? 'is-invalid':'' ?>"
+								 type="text" name="namakomunitas" placeholder="Nama komunitas" />
 								<div class="invalid-feedback">
-								<?php echo form_error('namakampung') ?>
+								<?php echo form_error('namakomunitas') ?>
 								</div>
 							</div>
 
